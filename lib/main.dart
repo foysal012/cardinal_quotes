@@ -1,3 +1,4 @@
+import 'package:cardinal_quotes/view/screen/auth/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'view/screen/splash_screen.dart';
 
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       debugShowCheckedModeBanner: false,
-      home: SplashScreen()
+      // home: SplashScreen()
+      home: SignupScreen()
     );
   }
 }

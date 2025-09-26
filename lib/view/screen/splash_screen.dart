@@ -4,8 +4,28 @@ import 'package:cardinal_quotes/core/app_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
+import 'auth/login_screen.dart';
+
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+
+
+  @override
+  void initState() {
+    super.initState();
+    check();
+  }
+
+  Future<void> check() async{
+    await Future.delayed(Duration(seconds: 3));
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => LoginScreen()));
+  }
 
   @override
   Widget build(BuildContext context) {
