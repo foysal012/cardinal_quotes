@@ -1,5 +1,7 @@
 import 'package:cardinal_quotes/view/screen/auth/signup_screen.dart';
 import 'package:flutter/material.dart';
+import 'view/screen/auth/login_screen.dart';
+import 'view/screen/bottom_nav_bar/bottom_nav_bar_screen.dart';
 import 'view/screen/splash_screen.dart';
 
 void main() {
@@ -18,7 +20,9 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       // home: SplashScreen()
-      home: SignupScreen()
+      // home: SignupScreen()
+      // home: LoginScreen()
+      home: BottomNavBarScreen()
     );
   }
 }
