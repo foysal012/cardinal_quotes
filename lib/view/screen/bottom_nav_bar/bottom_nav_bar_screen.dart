@@ -1,7 +1,7 @@
-import 'package:cardinal_quotes/view/screen/bottom_nav_bar/home_screen.dart';
-import 'package:cardinal_quotes/view/screen/bottom_nav_bar/more_screen.dart';
-import 'package:cardinal_quotes/view/screen/bottom_nav_bar/sounds_screen.dart';
-import 'package:cardinal_quotes/view/screen/bottom_nav_bar/top_screen.dart';
+import 'home_screen.dart';
+import 'more_screen.dart';
+import 'sounds_screen.dart';
+import 'top_screen.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBarScreen extends StatefulWidget {
