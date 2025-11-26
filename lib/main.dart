@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'view/screen/auth/login_screen.dart';
 import 'view/screen/bottom_nav_bar/bottom_nav_bar_screen.dart';
 import 'view/screen/splash_screen.dart';
+import 'view/screen/walpaper_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
       // home: SplashScreen()
       // home: SignupScreen()
       // home: LoginScreen()
-      home: BottomNavBarScreen()
+      home: WallpaperScreen()
+      // home: BottomNavBarScreen()
     );
   }
 }
