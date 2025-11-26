@@ -2,6 +2,7 @@ import 'package:cardinal_quotes/view/screen/auth/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'view/screen/auth/login_screen.dart';
 import 'view/screen/bottom_nav_bar/bottom_nav_bar_screen.dart';
+import 'view/screen/sacred_journals.dart';
 import 'view/screen/splash_screen.dart';
 import 'view/screen/walpaper_screen.dart';
 
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       // home: SplashScreen()
       // home: SignupScreen()
       // home: LoginScreen()
-      home: WallpaperScreen()
+      home: SacredJournals()
       // home: BottomNavBarScreen()
     );
   }
