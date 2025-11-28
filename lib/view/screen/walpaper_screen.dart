@@ -9,6 +9,8 @@ class WallpaperScreen extends StatefulWidget {
 }
 
 class _WallpaperScreenState extends State<WallpaperScreen> {
+  dynamic selectedItem;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,8 +46,8 @@ class _WallpaperScreenState extends State<WallpaperScreen> {
                 child: GridView.builder(
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      crossAxisSpacing: 20.0,
-                      mainAxisSpacing: 20.0,
+                      crossAxisSpacing: 10.0,
+                      mainAxisSpacing: 10.0,
                       childAspectRatio: 1.0
                   ),
                   itemCount: 15,
@@ -54,17 +56,83 @@ class _WallpaperScreenState extends State<WallpaperScreen> {
                     return Column(
                       children: [
                         Row(
+                          mainAxisSize: MainAxisSize.min,
                           children: [
-                            Text('#Ambition #Inspirations',
-                              style: TextStyle(
-                                fontSize: 12,
-                                color: Color(0xffFEF0D6),
-                                fontWeight: FontWeight.w500
+                            Expanded(
+                              flex: 7,
+                              child: FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Text('#Ambition #Inspirations',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    color: Color(0xffFEF0D6),
+                                    fontWeight: FontWeight.w500
+                                  ),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
                               ),
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
                             ),
-                            Icon(Icons.more_vert, color: Color(0xffFEF0D6))
+                            Expanded(
+                              flex: 3,
+                              child: PopupMenuButton<SampleItem>(
+                                menuPadding: EdgeInsets.all(0.5),
+                                padding: EdgeInsets.all(5.0),
+                                initialValue: selectedItem,
+                                onSelected: (SampleItem item) {
+                                  setState(() {
+                                    selectedItem = item;
+                                  });
+                                },
+                                iconColor: Color(0xffFEF0D6),
+                                itemBuilder: (BuildContext context) => <PopupMenuEntry<SampleItem>>[
+                                  const PopupMenuItem<SampleItem>(
+                                      value: SampleItem.itemOne,
+                                      child: Row(
+                                          children: [
+                                            Icon(Icons.remove_red_eye),
+                                            Text('567.57K')
+                                          ]
+                                      )
+                                  ),
+                                  const PopupMenuItem<SampleItem>(
+                                      value: SampleItem.itemTwo,
+                                      child: Row(
+                                          children: [
+                                            Icon(Icons.bookmark),
+                                            Text('Save')
+                                          ]
+                                      )
+                                  ),
+                                  const PopupMenuItem<SampleItem>(
+                                      value: SampleItem.itemThree,
+                                      child: Row(
+                                          children: [
+                                            Icon(Icons.screen_share),
+                                            Text('Share')
+                                          ]
+                                      )
+                                  ),
+                                  const PopupMenuItem<SampleItem>(
+                                      value: SampleItem.itemFour,
+                                      child: Row(
+                                          children: [
+                                            Icon(Icons.download),
+                                            Text('Download')
+                                          ]
+                                      )
+                                  ),
+                                  const PopupMenuItem<SampleItem>(
+                                      value: SampleItem.itemFive, child: Row(
+                                      children: [
+                                        Icon(Icons.settings_brightness),
+                                        Text('Set')
+                                      ]
+                                  )
+                                  ),
+                                ],
+                              ),
+                            ),
                           ],
                         ),
                         AppStyle.gap(5.0),
@@ -102,3 +170,4 @@ class _WallpaperScreenState extends State<WallpaperScreen> {
     );
   }
 }
+enum SampleItem { itemOne, itemTwo, itemThree , itemFour, itemFive}
