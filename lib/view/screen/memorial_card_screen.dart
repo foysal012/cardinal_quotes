@@ -1,8 +1,6 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-
 import '../../core/app_style.dart';
 
 class MemorialCardScreen extends StatefulWidget {
@@ -22,7 +20,13 @@ class _MemorialCardScreenState extends State<MemorialCardScreen> {
 
   Future<void> uploadImage() async{
     ImagePicker picker = ImagePicker();
-    file = await picker.pickImage(source: ImageSource.camera);
+    final pickedFile = await picker.pickImage(source: ImageSource.camera);
+
+    if (pickedFile != null) {
+      setState(() {
+        file = pickedFile;
+      });
+    }
   }
 
   @override
@@ -62,7 +66,7 @@ class _MemorialCardScreenState extends State<MemorialCardScreen> {
                           color: Color(0xff52180D0D),
                           borderRadius: BorderRadius.all(Radius.circular(10.0)),
                         ),
-                        child: file.toString().isNotEmpty? Image.file(File(file!.path)): Row(
+                        child: file.toString().isNotEmpty? Image.file(File(file?.path??'')): Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Icon(Icons.add_circle_outline_outlined, color: Color(0xff52180D)),
