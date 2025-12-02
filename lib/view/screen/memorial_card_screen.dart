@@ -63,7 +63,7 @@ class _MemorialCardScreenState extends State<MemorialCardScreen> {
                         height: 142,
                         width: 252,
                         decoration: BoxDecoration(
-                          color: Color(0xff52180D0D),
+                          color: Color(0xff52180d0d),
                           borderRadius: BorderRadius.all(Radius.circular(10.0)),
                         ),
                         child: file.toString().isNotEmpty? Image.file(File(file?.path??'')): Row(
@@ -95,14 +95,14 @@ class _MemorialCardScreenState extends State<MemorialCardScreen> {
                               enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
                                 borderSide: BorderSide(
-                                  color: Color(0xff52180D0D),
+                                  color: Color(0xff52180d0d),
                                   width: 2
                                 )
                               ),
                               focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                                   borderSide: BorderSide(
-                                      color: Color(0xff52180D0D),
+                                      color: Color(0xff52180d0d),
                                       width: 2
                                   )
                               ),
@@ -110,7 +110,7 @@ class _MemorialCardScreenState extends State<MemorialCardScreen> {
                               hintStyle: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xff52180D0D)
+                                color: Color(0xff52180d0d)
                               )
                             ),
                           ),
@@ -122,14 +122,14 @@ class _MemorialCardScreenState extends State<MemorialCardScreen> {
                                 enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                                     borderSide: BorderSide(
-                                        color: Color(0xff52180D0D),
+                                        color: Color(0xff52180d0d),
                                         width: 2
                                     )
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                                     borderSide: BorderSide(
-                                        color: Color(0xff52180D0D),
+                                        color: Color(0xff52180d0d),
                                         width: 2
                                     )
                                 ),
@@ -137,7 +137,7 @@ class _MemorialCardScreenState extends State<MemorialCardScreen> {
                               hintStyle: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xff52180D0D)
+                                color: Color(0xff52180d0d)
                               )
                             ),
                           ),
@@ -149,14 +149,14 @@ class _MemorialCardScreenState extends State<MemorialCardScreen> {
                                 enabledBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                                     borderSide: BorderSide(
-                                        color: Color(0xff52180D0D),
+                                        color: Color(0xff52180d0d),
                                         width: 2
                                     )
                                 ),
                                 focusedBorder: OutlineInputBorder(
                                     borderRadius: BorderRadius.all(Radius.circular(10.0)),
                                     borderSide: BorderSide(
-                                        color: Color(0xff52180D0D),
+                                        color: Color(0xff52180d0d),
                                         width: 2
                                     )
                                 ),
@@ -164,7 +164,7 @@ class _MemorialCardScreenState extends State<MemorialCardScreen> {
                               hintStyle: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
-                                color: Color(0xff52180D0D)
+                                color: Color(0xff52180d0d)
                               )
                             ),
                           ),
