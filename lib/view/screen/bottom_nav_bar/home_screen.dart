@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../core/app_style.dart';
+import '../../widget/my_drawer_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -9,9 +10,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      drawer: MyDrawerScreen(),
       backgroundColor: Colors.red,
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 20.0),
@@ -25,7 +31,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Expanded(
                         flex:2,
-                        child: Icon(Icons.menu, color: Color(0xffFEF0D6))
+                        child: IconButton(
+                            onPressed: (){
+                              scaffoldKey.currentState?.openDrawer();
+                            },
+                            icon: Icon(Icons.menu, color: Color(0xffFEF0D6))
+                        )
                     ),
                     AppStyle.gap(5.0),
                     Expanded(

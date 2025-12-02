@@ -122,7 +122,7 @@ class _SoundDetailsScreenState extends State<SoundDetailsScreen> {
                       ],
                     ),
 
-                    Center(child: Icon(Icons.play_circle_outline, size: 60, color: Colors.white)),
+                    Center(child: Icon(Icons.play_circle_outline, size: 80, color: Colors.white)),
                     AppStyle.gap(10.0),
 
                     Row(
