@@ -1,6 +1,7 @@
 import 'package:cardinal_quotes/core/app_style.dart';
 import 'package:flutter/material.dart';
 
+import '../screen/medicine_note_screen.dart';
 import 'drawer_item_widget.dart';
 
 class MyDrawerScreen extends StatefulWidget {
@@ -14,6 +15,7 @@ class _MyDrawerScreenState extends State<MyDrawerScreen> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: Color(0xffFEF0D6),
       child: ListView(
         padding: EdgeInsets.all(10.0),
         children: [
@@ -27,7 +29,13 @@ class _MyDrawerScreenState extends State<MyDrawerScreen> {
             ),
           ),
           DrawerHeader(
-            child: Text('\"Please Come from within\nDo not seek it without\"\nBuddha'),
+            child: Text('\"Please Come from within\nDo not seek it without\"\nBuddha',
+              style: TextStyle(
+                  fontSize: 18,
+                  color: Color(0xff591A0E),
+                  fontWeight: FontWeight.bold
+              ),
+            ),
           ),
 
           DrawerItemWidget(
@@ -138,7 +146,7 @@ class _MyDrawerScreenState extends State<MyDrawerScreen> {
             iconData: Icons.note,
             title: 'Medicine Note',
             onTap: (){
-
+              Navigator.of(context).push(MaterialPageRoute(builder: (context) => MedicineNoteScreen()));
             },
           ),
 
