@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'view/screen/bottom_nav_bar/bottom_nav_bar_screen.dart';
 import 'view/screen/bottom_nav_bar/sounds_screen.dart';
 import 'view/screen/journal_screen.dart';
+import 'view/screen/medicine_note_screen.dart';
 import 'view/screen/sound_details_screen.dart';
 
 void main() {
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       // home: SplashScreen()
       // home: SignupScreen()
       // home: LoginScreen()
-      // home: SoundsScreen()
+      // home: MedicineNoteScreen()
       home: BottomNavBarScreen()
     );
   }
