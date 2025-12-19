@@ -3,7 +3,9 @@ import '../../../core/app_style.dart';
 import '../sound_details_screen.dart';
 
 class TopScreen extends StatefulWidget {
-  const TopScreen({super.key});
+  const TopScreen({super.key, this.fromBottomNavber = false});
+
+  final bool fromBottomNavber;
 
   @override
   State<TopScreen> createState() => _TopScreenState();
@@ -22,7 +24,7 @@ class _TopScreenState extends State<TopScreen> {
               AppStyle.gap(70.0),
               Row(
                 children: [
-                  IconButton(
+                  widget.fromBottomNavber?SizedBox.shrink():IconButton(
                       onPressed: (){
 
                       },

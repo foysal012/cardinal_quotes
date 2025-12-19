@@ -4,7 +4,9 @@ import '../edit_profile_screen.dart';
 import '../sound_details_screen.dart';
 
 class MoreScreen extends StatefulWidget {
-  const MoreScreen({super.key});
+  const MoreScreen({super.key, this.fromBottomNavber = false});
+
+  final bool fromBottomNavber;
 
   @override
   State<MoreScreen> createState() => _MoreScreenState();
@@ -249,7 +251,7 @@ class _MoreScreenState extends State<MoreScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Icon(Icons.arrow_forward, color: Color(0xffFEF0D6)),
+                      widget.fromBottomNavber?SizedBox.shrink():Icon(Icons.arrow_forward, color: Color(0xffFEF0D6)),
                       Text(
                         'Profile',
                         style: TextStyle(
@@ -258,7 +260,9 @@ class _MoreScreenState extends State<MoreScreen> {
                             color: Color(0xffFEF0D6)),
                       ),
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => EditProfileScreen()));
+                        },
                         child: Text(
                           'Edit',
                           style: TextStyle(
@@ -311,7 +315,7 @@ class _MoreScreenState extends State<MoreScreen> {
                     child: GestureDetector(
                       onTap: () {},
                       child: Container(
-                        height: 227,
+                        height: 120,
                         padding: EdgeInsets.all(15),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
