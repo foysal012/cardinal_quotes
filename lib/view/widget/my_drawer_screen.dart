@@ -29,7 +29,7 @@ class _MyDrawerScreenState extends State<MyDrawerScreen> {
             ),
           ),
           DrawerHeader(
-            child: Text('\"Please Come from within\nDo not seek it without\"\nBuddha',
+            child: Text('"Please Come from within\nDo not seek it without"\nBuddha',
               style: TextStyle(
                   fontSize: 18,
                   color: Color(0xff591A0E),

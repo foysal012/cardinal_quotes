@@ -1,7 +1,7 @@
+import 'package:cardinal_quotes/theme/app_typography.dart';
 import 'package:flutter/material.dart';
 import '../../../core/app_style.dart';
 import '../edit_profile_screen.dart';
-import '../sound_details_screen.dart';
 
 class MoreScreen extends StatefulWidget {
   const MoreScreen({super.key, this.fromBottomNavber = false});
@@ -254,10 +254,11 @@ class _MoreScreenState extends State<MoreScreen> {
                       widget.fromBottomNavber?SizedBox.shrink():Icon(Icons.arrow_forward, color: Color(0xffFEF0D6)),
                       Text(
                         'Profile',
-                        style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xffFEF0D6)),
+                        // style: TextStyle(
+                        //     fontSize: 16,
+                        //     fontWeight: FontWeight.bold,
+                        //     color: Color(0xffFEF0D6)),
+                        style: AppTypography.titleMedium(context),
                       ),
                       TextButton(
                         onPressed: () {
