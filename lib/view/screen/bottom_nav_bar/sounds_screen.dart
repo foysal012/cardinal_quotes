@@ -3,7 +3,9 @@ import '../../../core/app_style.dart';
 import '../sound_details_screen.dart';
 
 class SoundsScreen extends StatefulWidget {
-  const SoundsScreen({super.key});
+  const SoundsScreen({super.key, this.fromBottomNavber = false});
+
+  final bool fromBottomNavber;
 
   @override
   State<SoundsScreen> createState() => _SoundsScreenState();
@@ -22,10 +24,8 @@ class _SoundsScreenState extends State<SoundsScreen> {
               AppStyle.gap(70.0),
               Row(
                 children: [
-                  IconButton(
-                      onPressed: (){
-
-                      },
+                  widget.fromBottomNavber?SizedBox.shrink():IconButton(
+                      onPressed: (){},
                       icon: Icon(Icons.arrow_forward, color: Color(0xffFEF0D6), size: 30.0,)
                   ),
                   AppStyle.gap(5.0),

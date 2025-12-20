@@ -1,5 +1,6 @@
 import 'home_screen.dart';
 import 'more_screen.dart';
+import 'soul_screen.dart';
 import 'sounds_screen.dart';
 import 'top_screen.dart';
 import 'package:flutter/material.dart';
@@ -15,10 +16,10 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
 
   List<Widget> pages = [
     HomeScreen(),
-    SoundsScreen(),
-    SoundsScreen(),
-    TopScreen(),
-    MoreScreen()
+    SoundsScreen(fromBottomNavber: true),
+    SoulScreen(fromBottomNavber: true,),
+    TopScreen(fromBottomNavber: true),
+    MoreScreen(fromBottomNavber: true)
   ];
   int currentIndex = 0;
 
