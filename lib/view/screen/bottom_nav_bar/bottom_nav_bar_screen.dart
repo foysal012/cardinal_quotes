@@ -35,21 +35,21 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
             });
           },
           currentIndex: currentIndex,
-          backgroundColor: Color(0xffFEF0D6),
-          // backgroundColor: Color(0xff201f1f),
-          selectedItemColor: Color(0xff52180D),
-          selectedLabelStyle: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            color: Color(0xff52180D)
-          ),
-          unselectedItemColor: Color(0xff52180D).withAlpha(600),
-          unselectedLabelStyle: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w500,
-              color: Color(0xff52180D).withAlpha(600),
-          ),
-          showUnselectedLabels: true,
+          // backgroundColor: Color(0xffFEF0D6),
+          // // backgroundColor: Color(0xff201f1f),
+          // selectedItemColor: Color(0xff52180D),
+          // selectedLabelStyle: TextStyle(
+          //   fontSize: 16,
+          //   fontWeight: FontWeight.bold,
+          //   color: Color(0xff52180D)
+          // ),
+          // unselectedItemColor: Color(0xff52180D).withAlpha(600),
+          // unselectedLabelStyle: TextStyle(
+          //     fontSize: 14,
+          //     fontWeight: FontWeight.w500,
+          //     color: Color(0xff52180D).withAlpha(600),
+          // ),
+          // showUnselectedLabels: true,
 
           items: [
             BottomNavigationBarItem(

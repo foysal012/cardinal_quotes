@@ -1,3 +1,4 @@
+import 'package:cardinal_quotes/core/app_color.dart';
 import 'package:cardinal_quotes/theme/app_typography.dart';
 import 'package:flutter/material.dart';
 import '../../../core/app_style.dart';
@@ -16,7 +17,8 @@ class _MoreScreenState extends State<MoreScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      // backgroundColor: Colors.red,
+      ///
       // body: Container(
       //   padding: EdgeInsets.symmetric(horizontal: 20.0),
       //   child: SingleChildScrollView(
@@ -266,10 +268,11 @@ class _MoreScreenState extends State<MoreScreen> {
                         },
                         child: Text(
                           'Edit',
-                          style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xffFEF0D6)),
+                          // style: TextStyle(
+                          //     fontSize: 16,
+                          //     fontWeight: FontWeight.bold,
+                          //     color: Color(0xffFEF0D6)),
+                          style: AppTypography.titleMedium(context),
                         ),
                       )
                     ],
@@ -292,13 +295,17 @@ class _MoreScreenState extends State<MoreScreen> {
 
                   AppStyle.gap(10),
                   Text('Eduardo Amaral',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xffFEF0D6))),
+                      // style: TextStyle(
+                      //     fontSize: 20,
+                      //     fontWeight: FontWeight.bold,
+                      //     color: Color(0xffFEF0D6))
+                    style: AppTypography.titleLarge(context),
+                  ),
                   AppStyle.gap(5),
                   Text('Software Engineer',
-                      style: TextStyle(color: Color(0xffc6c2bd))),
+                      // style: TextStyle(color: Color(0xffc6c2bd))
+                      style: AppTypography.titleSmall(context).copyWith(color: AppColors.textGrey),
+                  ),
 
                   AppStyle.gap(20),
                 ],
@@ -335,19 +342,22 @@ class _MoreScreenState extends State<MoreScreen> {
                             children: [
                               Text(
                                 'Daily UI #005 - App Icon',
-                                style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white),
+                                // style: TextStyle(
+                                //     fontSize: 18,
+                                //     fontWeight: FontWeight.bold,
+                                //     color: Colors.white),
+                                style: AppTypography.titleMedium(context),
                               ),
                               Row(
                                 children: [
-                                  Icon(Icons.favorite, color: Colors.white),
+                                  Icon(Icons.favorite,),
                                   SizedBox(width: 4),
                                   Text('8',
-                                      style: TextStyle(
-                                          fontSize: 18,
-                                          color: Colors.white)),
+                                      // style: TextStyle(
+                                      //     fontSize: 18,
+                                      //     color: Colors.white),
+                                    style: AppTypography.titleMedium(context),
+                                  )
                                 ],
                               )
                             ],

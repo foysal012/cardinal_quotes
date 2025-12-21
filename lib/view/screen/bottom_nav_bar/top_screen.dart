@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../core/app_style.dart';
+import '../../../theme/app_typography.dart';
 import '../sound_details_screen.dart';
 
 class TopScreen extends StatefulWidget {
@@ -15,7 +16,7 @@ class _TopScreenState extends State<TopScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      // backgroundColor: Colors.red,
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 20.0),
         child: SingleChildScrollView(
@@ -32,11 +33,12 @@ class _TopScreenState extends State<TopScreen> {
                   ),
                   AppStyle.gap(5.0),
                   Text('Top Quotes',
-                    style: TextStyle(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xffFEF0D6)
-                    ),
+                    // style: TextStyle(
+                    //     fontSize: 16.0,
+                    //     fontWeight: FontWeight.bold,
+                    //     color: Color(0xffFEF0D6)
+                    // ),
+                    style: AppTypography.titleMedium(context),
                   ),
                 ],
               ),
@@ -91,6 +93,8 @@ class _TopScreenState extends State<TopScreen> {
                                               fontWeight: FontWeight.w500,
                                               color: Colors.black87
                                             ),
+                                            // style: AppTypography.titleMedium(context),
+
                                           ),
 
                                           Text('Dalai Lama',
@@ -99,6 +103,8 @@ class _TopScreenState extends State<TopScreen> {
                                                 fontWeight: FontWeight.bold,
                                                 color: Colors.black
                                             ),
+                                            // style: AppTypography.titleMedium(context),
+
                                           )
                                         ],
                                       ),
@@ -109,37 +115,41 @@ class _TopScreenState extends State<TopScreen> {
                               AppStyle.gap(10.0),
 
                               Text('Music Wiper',
-                                style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xffF0F0F0)
-                                ),
+                                // style: TextStyle(
+                                //     fontSize: 16,
+                                //     fontWeight: FontWeight.bold,
+                                //     color: Color(0xffF0F0F0)
+                                // ),
+                                style: AppTypography.titleMedium(context),
                               ),
                               AppStyle.gap(5.0),
 
                               Row(children: [
                                 Text('#Ambition',
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color(0xffF0F0F0)
-                                  ),
+                                  // style: TextStyle(
+                                  //     fontSize: 14,
+                                  //     fontWeight: FontWeight.bold,
+                                  //     color: Color(0xffF0F0F0)
+                                  // ),
+                                  style: AppTypography.titleMedium(context),
                                 ),
                                 AppStyle.gap(10.0),
                                 Text('#Inspiration',
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color(0xffF0F0F0)
-                                  ),
+                                  // style: TextStyle(
+                                  //     fontSize: 14,
+                                  //     fontWeight: FontWeight.bold,
+                                  //     color: Color(0xffF0F0F0)
+                                  // ),
+                                  style: AppTypography.titleMedium(context),
                                 ),
                                 AppStyle.gap(10.0),
                                 Text('#Motivational',
-                                  style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color(0xffF0F0F0)
-                                  ),
+                                  // style: TextStyle(
+                                  //     fontSize: 14,
+                                  //     fontWeight: FontWeight.bold,
+                                  //     color: Color(0xffF0F0F0)
+                                  // ),
+                                  style: AppTypography.titleMedium(context),
                                 ),
                               ],
                               ),
@@ -150,60 +160,68 @@ class _TopScreenState extends State<TopScreen> {
                                 children: [
                                   Row(
                                     children: [
-                                      Icon(Icons.visibility, color: Color(0xffF0F0F0),),
+                                      // Icon(Icons.visibility, color: Color(0xffF0F0F0),),
+                                      Icon(Icons.visibility),
                                       AppStyle.gap(5.0),
 
                                       Text('567.57k',
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color(0xffF0F0F0)
-                                        ),
+                                        // style: TextStyle(
+                                        //     fontSize: 12,
+                                        //     fontWeight: FontWeight.bold,
+                                        //     color: Color(0xffF0F0F0)
+                                        // ),
+                                        style: AppTypography.labelMedium(context)
                                       ),
                                     ],
                                   ),
 
                                   Row(
                                     children: [
-                                      Icon(Icons.share, color: Color(0xffF0F0F0),),
+                                      // Icon(Icons.share, color: Color(0xffF0F0F0),),
+                                      Icon(Icons.share),
                                       AppStyle.gap(5.0),
 
                                       Text('Share',
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color(0xffF0F0F0)
-                                        ),
+                                        // style: TextStyle(
+                                        //     fontSize: 12,
+                                        //     fontWeight: FontWeight.bold,
+                                        //     color: Color(0xffF0F0F0)
+                                        // ),
+                                        style: AppTypography.labelMedium(context)
                                       ),
                                     ],
                                   ),
 
                                   Row(
                                     children: [
-                                      Icon(Icons.download, color: Color(0xffF0F0F0),),
+                                      // Icon(Icons.download, color: Color(0xffF0F0F0),),
+                                      Icon(Icons.download),
                                       AppStyle.gap(5.0),
 
                                       Text('Download',
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color(0xffF0F0F0)
-                                        ),
+                                        // style: TextStyle(
+                                        //     fontSize: 12,
+                                        //     fontWeight: FontWeight.bold,
+                                        //     color: Color(0xffF0F0F0)
+                                        // ),
+                                        style: AppTypography.labelMedium(context)
                                       ),
                                     ],
                                   ),
 
                                   Row(
                                     children: [
-                                      Icon(Icons.bookmark, color: Color(0xffF0F0F0),),
+                                      // Icon(Icons.bookmark, color: Color(0xffF0F0F0),),
+                                      Icon(Icons.bookmark),
                                       AppStyle.gap(5.0),
 
                                       Text('Save',
-                                        style: TextStyle(
-                                            fontSize: 12,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color(0xffF0F0F0)
-                                        ),
+                                        // style: TextStyle(
+                                        //     fontSize: 12,
+                                        //     fontWeight: FontWeight.bold,
+                                        //     color: Color(0xffF0F0F0)
+                                        // ),
+                                        style: AppTypography.labelMedium(context)
                                       ),
                                     ],
                                   ),
